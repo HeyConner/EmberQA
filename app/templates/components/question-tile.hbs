@@ -1,6 +1,5 @@
 
 {{question.author}} Says, {{question.newQuestion}} On {{question.date}}
-<button {{action 'showMoreShow'}}>Show More</button>
   {{#if isEditShowing}}
   <form>
     <div class="container">
@@ -16,8 +15,9 @@
       {{input value=body id="body" class="form-control"}}
     </div>
     <div class="container">
-      <button {{action 'save1'}}>{{#link-to 'index'}}Save{{/link-to}}</button>
-      <button {{action 'editHide'}}>{{#link-to 'index'}}Hide{{/link-to}}</button>
+      <button {{action 'update' question}}>Save</button>
+      <button {{action 'delete' question}}>Delete</button>
+      <button {{action 'editHide'}}>Hide</button>
     </div>
   </form>
 {{else}}

@@ -1,0 +1,19 @@
+{{#if isAnswerShowing}}
+<form>
+  <div class="container">
+    <label for="answer">Author</label>
+    {{input value=author id="author" class="form-control"}}
+  </div>
+  <div class="container">
+    <label for="body">Answer</label>
+    {{input value=body id="body" class="form-control"}}
+  </div>
+  <div class="container">
+    <button {{action 'addAnswer'}}>Add</button>
+    <button {{action 'answerHide'}}>Hide</button>
+  </div>
+
+</form>
+{{else}}
+<button {{action 'answerShow'}}>Answer</button>
+{{/if}}

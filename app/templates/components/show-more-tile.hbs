@@ -1,2 +1,10 @@
+{{#if isShowMoreShowing}}
 {{question.body}}
-<h4>{{answer.author}} Says {{answer.body}}</h4>
+{{new-answer question=question sendAnswer="sendAnswer"}}
+{{#each question.answers as |answer|}}
+<h4>{{answer.author}} says {{answer.body}}</h4>
+{{/each}}
+<button {{action 'showMoreHide'}}>Hide</button>
+{{else}}
+<button {{action 'showMoreShow'}}>Show More</button>
+{{/if}}
