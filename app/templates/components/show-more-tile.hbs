@@ -1,7 +1,7 @@
 {{#if isShowMoreShowing}}
 {{question.body}}
 {{new-answer question=question sendAnswer="sendAnswer"}}
-{{#each question.answers as |answer|}}
+{{#each sortedAnswers as |answer|}}
 <h4>{{answer.author}} says {{answer.body}}</h4>
 {{/each}}
 <button {{action 'showMoreHide'}}>Hide</button>

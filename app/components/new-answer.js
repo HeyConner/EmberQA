@@ -7,9 +7,11 @@ export default Ember.Component.extend({
       var params = {
         author: this.get('author'),
         body: this.get('body'),
-        question: this.get('question')
+        question: this.get('question'),
+        date: moment().format()
       };
       this.sendAction('sendAnswer', params);
+      this.set('isAnswerShowing', false)
       },
       answerHide: function() {
         this.set('isAnswerShowing', false);
