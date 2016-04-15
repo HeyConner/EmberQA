@@ -1,7 +1,8 @@
 <h1>Questions:</h1>
 <ol>
   {{#each model as |question|}}
-  <li>{{question.author}}Asks, {{question.newQuestion}} <br> {{question.body}}</li>
+  <li>{{question.author}} Asks, {{question.newQuestion}} <br> {{question.body}}</li> <br>
+  {{/each}}
 </ol>
 
 {{#link-to 'about'}}About Us{{/link-to}}
