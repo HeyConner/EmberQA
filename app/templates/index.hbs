@@ -1,0 +1,7 @@
+<h1>Questions:</h1>
+<ol>
+  {{#each model as |question|}}
+  <li>{{question.author}}Asks, {{question.newQuestion}} <br> {{question.body}}</li>
+</ol>
+
+{{#link-to 'about'}}About Us{{/link-to}}
