@@ -1,1 +1,25 @@
-{{question.author}} Says, {{question.newQuestion}}, {{question.body}}. On {{question.date}}
+
+{{question.author}} Says, {{question.newQuestion}} On {{question.date}}
+<button {{action 'showMoreShow'}}>Show More</button>
+  {{#if isEditShowing}}
+  <form>
+    <div class="container">
+      <label for="author">Author:</label>
+      {{input value=author id="author" class="form-control"}}
+    </div>
+    <div class="container">
+      <label for="newQuestion">Question:</label>
+      {{input value=newQuestion id="newQuestion" class="form-control"}}
+    </div>
+    <div class="container">
+      <label for="body">Details:</label>
+      {{input value=body id="body" class="form-control"}}
+    </div>
+    <div class="container">
+      <button {{action 'save1'}}>{{#link-to 'index'}}Save{{/link-to}}</button>
+      <button {{action 'editHide'}}>{{#link-to 'index'}}Hide{{/link-to}}</button>
+    </div>
+  </form>
+{{else}}
+<button {{action 'editShow'}}>Edit</button>
+{{/if}}

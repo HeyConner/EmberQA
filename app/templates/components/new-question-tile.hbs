@@ -1,0 +1,26 @@
+<h1>Questions:</h1>
+<div class="container">
+  {{#if isNewQuestionShowing}}
+    <h3>New Question</h3>
+    <form>
+      <div class="container">
+        <label for="author">Author:</label>
+        {{input value=author id="author" class=form-control}}
+      </div>
+      <div class="container">
+        <label for="newQuestion">Question:</label>
+        {{input value=newQuestion id="newQuestion" class="form-control"}}
+      </div>
+      <div class="container">
+        <label for="details">Details:</label>
+        {{input value=body id="body" class="form-control"}}
+      </div>
+      <div class="container">
+        <button {{action 'save1'}}>{{#link-to 'index'}}Save{{/link-to}}</button>
+        <button {{action 'newQuestionHide'}}>{{#link-to 'index'}}Hide{{/link-to}}</button>
+      </div>
+    </form>
+    {{else}}
+    <button {{action 'newQuestionShow'}} name="button">New Question</button>
+    {{/if}}
+</div>

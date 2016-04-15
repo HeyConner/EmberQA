@@ -1,8 +1,8 @@
-<h1>Questions:</h1>
+<div class="container">
+  {{new-question-tile question=question}}
+</div>
 <ol>
   {{#each model as |question|}}
   <li>{{question-tile question=question}}</li> <br>
   {{/each}}
 </ol>
-
-{{#link-to 'about'}}About Us{{/link-to}}
