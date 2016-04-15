@@ -1,0 +1,19 @@
+{ "question": [{
+  "author": "Conner Belvin",
+  "newQuestion": "Where is the bathroom?",
+  "body": "I really have to go.",
+  "date": "June 4th, 2010"
+  },
+  {
+    "author": "Carly Belvin",
+    "newQuestion": "I cant find my feet",
+    "body": "I cant walk.",
+    "date": "June 22nd, 2020"
+    },
+  {
+    "author": "Bob Belvin",
+    "newQuestion": "Where is my brain",
+    "body": "Im stupid",
+    "date": "Febuary 22nd, 2111"
+    }]
+  }
